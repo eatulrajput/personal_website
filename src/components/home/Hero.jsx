@@ -28,7 +28,7 @@ const Hero = () => {
     };
 
     return (
-        <section className="relative w-screen py-20  flex flex-col-reverse md:flex-row items-center justify-between gap-12 text-white bg-black">
+        <section className="relative w-full py-20  flex flex-col-reverse md:flex-row items-center justify-between gap-12 text-white bg-black">
             {/* Text Section */}
             <div className="w-full md:w-1/2 text-center md:text-left px-4 md:px-8">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-light leading-snug">

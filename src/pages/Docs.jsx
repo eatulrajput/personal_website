@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import Git from "./docs/Git"
+import Git from "../components/docs/Git"
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Footer from "./Footer";
 
 const Docs = () => {
   useEffect(() => {
@@ -12,8 +11,7 @@ const Docs = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-900 via-black to-gray-900 text-gray-200 relative overflow-hidden mt-10">
-      {/* Hero Section */}
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-900 via-black to-gray-900 text-gray-200 relative overflow-hidden pt-10">
       <div className="flex-grow flex flex-col items-center justify-center text-center px-6 pt-24 pb-12">
         <h1
           data-aos="fade-up"
@@ -51,8 +49,6 @@ const Docs = () => {
           </Link>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

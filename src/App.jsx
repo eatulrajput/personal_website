@@ -1,40 +1,40 @@
-import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import Blog from "./components/Blog";
-import Nest from "./components/Nest";
-import Docs from "./components/Docs";
-import Git from "./components/docs/Git";
-import NotFound from "./components/NotFound"
-import LoadingSpinner from "./components/LoadingSpinner";
+import { useState, useEffect } from "react";
+import {
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+} from "react-router-dom";
+import {LoadingSpinner} from "./components"
+import {Home,Blog,Nest,Docs,NotFound} from "./pages";
+import Layout from "./components/Layout"
 
 function App() {
-    const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        // Simulate loading delay
-        const timer = setTimeout(() => setLoading(false), 2000);
-        return () => clearTimeout(timer);
-    }, []);
+  useEffect(() => {
+    // Simulate loading delay
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
 
-    if (loading) {
-        return <LoadingSpinner loading={loading} />;
-    }
+  if (loading) {
+    return <LoadingSpinner loading={loading} />;
+  }
 
-    return (
-        <Router>
-            <Navbar />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/nest" element={<Nest />} />
-                <Route path="/docs" element={<Docs />} />
-                <Route path="/docs/git" element={<Git />} />
-                <Route path="*" element={<NotFound />} />
-            </Routes>
-        </Router>
-    );
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<Layout />}>
+        <Route path="" element={<Home />} />
+        <Route path="blog" element={<Blog />} />
+        <Route path="nest" element={<Nest />} />
+        <Route path="docs" element={<Docs />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>,
+    ),
+  );
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;
