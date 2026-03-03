@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import Footer from "./Footer";
-import MediumFeed from "./MediumFeed";
+import MediumFeed from "../components/MediumFeed";
 import Spline from "@splinetool/react-spline";
 
 const Blog = () => {
@@ -14,7 +13,9 @@ const Blog = () => {
       <section className="w-full grid grid-cols-1 md:grid-cols-2 items-center py-16 px-6 md:px-16 gap-10">
         {/* Text Content */}
         <div className="z-10 order-1 md:order-none text-center md:text-left">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Blogs</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+            Blogs
+          </h1>
           <p className="text-base sm:text-lg text-gray-300 max-w-xl mx-auto md:mx-0">
             Welcome to my blog where I share insights, tutorials, and stories
             about backend development, machine learning, and building real-world
@@ -34,9 +35,6 @@ const Blog = () => {
           <MediumFeed />
         </div>
       </main>
-
-      {/* Footer */}
-      <Footer />
     </div>
   );
 };

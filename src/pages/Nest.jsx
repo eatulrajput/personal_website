@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Footer from "./Footer";
 
 // Quotes Data
 const quotes = [
@@ -181,9 +180,6 @@ const Nest = () => {
           ></iframe>
         </div>
       </div>
-
-      {/* Footer */}
-      <Footer />
     </div>
   );
 };
