@@ -20,7 +20,9 @@ const DocsPage: React.FC = () => {
         </h1>
 
         <p className="text-lg text-[var(--muted-text)] max-w-2xl font-serif font-light leading-relaxed mb-10">
-          Everything you need to master standard commands, resolve architecture queries, and integrate core library tools. Simplified technical drafts compiled for speed.
+          Everything you need to master standard commands, resolve architecture
+          queries, and integrate core library tools. Simplified technical drafts
+          compiled for speed.
         </p>
 
         {/* Grayscale Sketch outline image */}
@@ -46,9 +48,12 @@ const DocsPage: React.FC = () => {
                 <span className="text-[9px] font-mono text-[var(--accent-color)] font-bold uppercase tracking-wider block mb-2">
                   CATEGORY: VERSION CONTROL
                 </span>
-                <h3 className="text-xl font-sans font-black uppercase mb-2">Git Tutorial</h3>
+                <h3 className="text-xl font-sans font-black uppercase mb-2">
+                  Git Tutorial
+                </h3>
                 <p className="text-sm font-serif text-[var(--muted-text)] font-light leading-relaxed mb-6">
-                  Quickstart references mapping essential Git CLI workflows, remote config, and workspace stash protocols.
+                  Quickstart references mapping essential Git CLI workflows,
+                  remote config, and workspace stash protocols.
                 </p>
               </div>
               <Link

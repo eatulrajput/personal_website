@@ -40,7 +40,11 @@ const socialLinks: SocialItem[] = [
 ];
 
 const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -53,7 +57,10 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-6 sm:px-12 bg-[var(--bg-color)] text-[var(--text-color)] news-border-b border-[var(--border-color)]">
+    <section
+      id="contact"
+      className="py-20 px-6 sm:px-12 bg-[var(--bg-color)] text-[var(--text-color)] news-border-b border-[var(--border-color)]"
+    >
       <div className="container mx-auto max-w-5xl">
         {/* Section Header */}
         <div className="flex items-center gap-3 mb-12 news-border-b border-[var(--border-color)] pb-4 justify-between">
@@ -93,7 +100,9 @@ const Contact: React.FC = () => {
                     type="text"
                     required
                     value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, name: e.target.value })
+                    }
                     className="w-full bg-[var(--card-bg)] border border-[var(--border-color)] p-2.5 font-mono text-xs text-[var(--text-color)] focus:outline-none focus:border-[var(--accent-color)]"
                     placeholder="E.g. ALICE, CTO"
                   />
@@ -107,7 +116,9 @@ const Contact: React.FC = () => {
                     type="email"
                     required
                     value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, email: e.target.value })
+                    }
                     className="w-full bg-[var(--card-bg)] border border-[var(--border-color)] p-2.5 font-mono text-xs text-[var(--text-color)] focus:outline-none focus:border-[var(--accent-color)]"
                     placeholder="E.g. CTO@ENTERPRISE.COM"
                   />
@@ -121,7 +132,9 @@ const Contact: React.FC = () => {
                     rows={4}
                     required
                     value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, message: e.target.value })
+                    }
                     className="w-full bg-[var(--card-bg)] border border-[var(--border-color)] p-2.5 font-mono text-xs text-[var(--text-color)] focus:outline-none focus:border-[var(--accent-color)]"
                     placeholder="Write your request..."
                   />
@@ -143,7 +156,8 @@ const Contact: React.FC = () => {
               Social Nodes
             </h4>
             <p className="text-sm font-serif leading-relaxed text-[var(--muted-text)] font-light">
-              For direct lines of connection or to browse through code repositories, please resolve these external addresses:
+              For direct lines of connection or to browse through code
+              repositories, please resolve these external addresses:
             </p>
 
             <div className="flex flex-wrap gap-4 pt-2">
@@ -167,11 +181,15 @@ const Contact: React.FC = () => {
             <div className="border-t border-[var(--border-subtle)] pt-6 space-y-2 text-xs font-mono font-bold uppercase">
               <div>
                 <span className="opacity-50">PGP Key: </span>
-                <span className="text-[var(--accent-color)] font-mono">0x4D3F...9E2A</span>
+                <span className="text-[var(--accent-color)] font-mono">
+                  0x4D3F...9E2A
+                </span>
               </div>
               <div>
                 <span className="opacity-50">Network Status: </span>
-                <span className="text-emerald-500 font-mono">Accepting Inbound Requests</span>
+                <span className="text-emerald-500 font-mono">
+                  Accepting Inbound Requests
+                </span>
               </div>
             </div>
           </div>

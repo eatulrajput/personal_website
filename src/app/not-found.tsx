@@ -8,17 +8,19 @@ export default function NotFound() {
         <span className="bg-[var(--accent-color)] text-white text-[10px] font-sans font-black px-2 py-0.5 tracking-widest uppercase">
           SYSTEM ERROR // 404
         </span>
-        
+
         <h1 className="text-7xl font-sans font-black tracking-tighter text-[var(--accent-color)] mt-4">
           404
         </h1>
-        
+
         <h2 className="text-xl font-sans font-black uppercase tracking-tight mt-2 leading-none">
           BULLETIN: Resource Not Found
         </h2>
-        
+
         <p className="text-sm font-serif font-light text-[var(--muted-text)] leading-relaxed mt-4 mb-6">
-          The endpoint you are attempting to resolve does not exist in our indexes. It may have been deprecated or moved to another directory section.
+          The endpoint you are attempting to resolve does not exist in our
+          indexes. It may have been deprecated or moved to another directory
+          section.
         </p>
 
         <Link

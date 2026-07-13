@@ -24,7 +24,8 @@ const projects: ProjectItem[] = [
     desc: "Engineered an autonomous conversational bot powered by Google's Gemini LLM engine. Handles multi-turn orders, analyzes sentiment patterns in real-time, and synchronizes queue state via WebSocket connections.",
     liveLink: "#",
     codeLink: "https://github.com/",
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80",
     featured: true,
   },
   {
@@ -35,7 +36,8 @@ const projects: ProjectItem[] = [
     desc: "A vision system processing high-resolution RTSP video frames to track room occupancy and verify attendance logs using custom vector embeddings.",
     liveLink: "#",
     codeLink: "https://github.com/",
-    image: "https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&w=600&q=80",
+    image:
+      "https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: 3,
@@ -74,7 +76,10 @@ const Projects: React.FC = () => {
   const normalProjects = projects.filter((p) => !p.featured);
 
   return (
-    <section id="projects" className="py-20 px-6 sm:px-12 bg-[var(--bg-color)] text-[var(--text-color)] news-border-b border-[var(--border-color)]">
+    <section
+      id="projects"
+      className="py-20 px-6 sm:px-12 bg-[var(--bg-color)] text-[var(--text-color)] news-border-b border-[var(--border-color)]"
+    >
       <div className="container mx-auto max-w-6xl">
         {/* Section Header */}
         <div className="flex items-center gap-3 mb-12 news-border-b border-[var(--border-color)] pb-4 justify-between">
@@ -99,7 +104,8 @@ const Projects: React.FC = () => {
               </span>
 
               {/* Featured Image */}
-              <div className="w-full h-72 bg-cover bg-center border border-[var(--border-color)] grayscale contrast-125 mb-4"
+              <div
+                className="w-full h-72 bg-cover bg-center border border-[var(--border-color)] grayscale contrast-125 mb-4"
                 style={{ backgroundImage: `url(${featuredProject.image})` }}
               />
 
@@ -147,7 +153,10 @@ const Projects: React.FC = () => {
 
             <div className="divide-y-2 divide-[var(--border-color)]">
               {normalProjects.map((project) => (
-                <div key={project.id} className="py-4 first:pt-0 last:pb-0 space-y-2 group">
+                <div
+                  key={project.id}
+                  className="py-4 first:pt-0 last:pb-0 space-y-2 group"
+                >
                   <span className="text-[9px] font-mono text-[var(--accent-color)] font-bold uppercase tracking-wider block">
                     {project.category}
                   </span>

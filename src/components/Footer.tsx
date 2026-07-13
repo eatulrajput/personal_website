@@ -41,13 +41,22 @@ const Footer: React.FC = () => {
               Index Section Links
             </h3>
             <div className="flex flex-col gap-2">
-              <Link href="/blog" className="hover:text-[var(--accent-color)] transition-colors duration-200">
+              <Link
+                href="/blog"
+                className="hover:text-[var(--accent-color)] transition-colors duration-200"
+              >
                 Blog Feed
               </Link>
-              <Link href="/nest" className="hover:text-[var(--accent-color)] transition-colors duration-200">
+              <Link
+                href="/nest"
+                className="hover:text-[var(--accent-color)] transition-colors duration-200"
+              >
                 The Nest
               </Link>
-              <Link href="/docs" className="hover:text-[var(--accent-color)] transition-colors duration-200">
+              <Link
+                href="/docs"
+                className="hover:text-[var(--accent-color)] transition-colors duration-200"
+              >
                 Git Docs
               </Link>
             </div>

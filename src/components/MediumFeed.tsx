@@ -87,7 +87,7 @@ const MediumFeed: React.FC = () => {
 
       try {
         const response = await fetch(
-          "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@MediumStaff"
+          "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@MediumStaff",
         );
         const data = await response.json();
 
@@ -125,7 +125,8 @@ const MediumFeed: React.FC = () => {
   useEffect(() => {
     const handleScroll = () => {
       const bottom =
-        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 300;
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 300;
 
       if (bottom && visibleCount < articles.length) {
         setVisibleCount((prev) => Math.min(prev + 5, articles.length));

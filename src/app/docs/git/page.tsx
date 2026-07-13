@@ -119,8 +119,7 @@ const commands: GitCommand[] = [
   },
   {
     title: "List All Stashes",
-    description:
-      "View all the saved stashes you've made so far.",
+    description: "View all the saved stashes you've made so far.",
     code: "git stash list",
   },
   {
@@ -155,7 +154,8 @@ const GitTutorialPage: React.FC = () => {
           Git & GitHub Command Directory
         </h1>
         <p className="text-sm text-[var(--muted-text)] font-serif font-light leading-relaxed mt-4">
-          Learn essential Git commands with detailed, structured explanations. Optimized for terminal indexing.
+          Learn essential Git commands with detailed, structured explanations.
+          Optimized for terminal indexing.
         </p>
       </div>
 
@@ -163,32 +163,45 @@ const GitTutorialPage: React.FC = () => {
         {/* Intro Blocks */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 news-border-b border-[var(--border-color)] pb-12">
           <div className="space-y-4">
-            <h2 className="text-2xl font-sans font-black uppercase">About Git & GitHub</h2>
+            <h2 className="text-2xl font-sans font-black uppercase">
+              About Git & GitHub
+            </h2>
             <p className="text-sm font-serif font-light leading-relaxed text-[var(--muted-text)] text-justify">
-              Git is a localized system that helps you keep track of changes in your code, so you can work safely and collaborate with others. GitHub is a hosting service that lets you store your Git repositories online, sync patches, and coordinate merge requests.
+              Git is a localized system that helps you keep track of changes in
+              your code, so you can work safely and collaborate with others.
+              GitHub is a hosting service that lets you store your Git
+              repositories online, sync patches, and coordinate merge requests.
             </p>
           </div>
 
           <div className="space-y-4">
-            <h2 className="text-2xl font-sans font-black uppercase">Terminologies</h2>
+            <h2 className="text-2xl font-sans font-black uppercase">
+              Terminologies
+            </h2>
             <div className="grid grid-cols-2 gap-2 text-xs font-mono font-bold">
               <div>
-                <span className="text-[var(--accent-color)]">&bull; </span>REPOSITORY
+                <span className="text-[var(--accent-color)]">&bull; </span>
+                REPOSITORY
               </div>
               <div>
-                <span className="text-[var(--accent-color)]">&bull; </span>COMMIT
+                <span className="text-[var(--accent-color)]">&bull; </span>
+                COMMIT
               </div>
               <div>
-                <span className="text-[var(--accent-color)]">&bull; </span>BRANCH
+                <span className="text-[var(--accent-color)]">&bull; </span>
+                BRANCH
               </div>
               <div>
-                <span className="text-[var(--accent-color)]">&bull; </span>MERGE PROTOCOL
+                <span className="text-[var(--accent-color)]">&bull; </span>MERGE
+                PROTOCOL
               </div>
               <div>
-                <span className="text-[var(--accent-color)]">&bull; </span>REMOTE ORIGIN
+                <span className="text-[var(--accent-color)]">&bull; </span>
+                REMOTE ORIGIN
               </div>
               <div>
-                <span className="text-[var(--accent-color)]">&bull; </span>STASH PILE
+                <span className="text-[var(--accent-color)]">&bull; </span>STASH
+                PILE
               </div>
             </div>
           </div>
@@ -202,7 +215,10 @@ const GitTutorialPage: React.FC = () => {
 
           <div className="divide-y divide-[var(--border-color)]">
             {commands.map((cmd, index) => (
-              <div key={index} className="py-6 flex flex-col md:flex-row gap-6 items-start font-serif">
+              <div
+                key={index}
+                className="py-6 flex flex-col md:flex-row gap-6 items-start font-serif"
+              >
                 {/* Number index */}
                 <div className="w-12 text-xs font-mono font-bold opacity-30 mt-1">
                   0{index + 1} //

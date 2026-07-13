@@ -36,7 +36,10 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: var(--font-serif);
-  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
   overflow-x: hidden;
 }
 

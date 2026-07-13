@@ -75,10 +75,17 @@ const skillsData: SkillItem[] = [
 ];
 
 const Skills: React.FC = () => {
-  const categories = ["Languages", "Frameworks", "Tools & Technologies"] as const;
+  const categories = [
+    "Languages",
+    "Frameworks",
+    "Tools & Technologies",
+  ] as const;
 
   return (
-    <section id="skills" className="py-20 px-6 sm:px-12 bg-[var(--bg-color)] text-[var(--text-color)] news-border-b border-[var(--border-color)]">
+    <section
+      id="skills"
+      className="py-20 px-6 sm:px-12 bg-[var(--bg-color)] text-[var(--text-color)] news-border-b border-[var(--border-color)]"
+    >
       <div className="container mx-auto max-w-6xl">
         {/* Section Header */}
         <div className="flex items-center gap-3 mb-12 news-border-b border-[var(--border-color)] pb-4 justify-between">
@@ -105,18 +112,25 @@ const Skills: React.FC = () => {
                 {/* Spec Sheet Header */}
                 <div className="bg-[var(--text-color)] text-[var(--bg-color)] p-3 font-sans font-black uppercase text-xs tracking-widest flex justify-between items-center">
                   <span>{cat}</span>
-                  <span className="text-[var(--accent-color)] font-mono">SPEC_SHT // 0{idx + 1}</span>
+                  <span className="text-[var(--accent-color)] font-mono">
+                    SPEC_SHT // 0{idx + 1}
+                  </span>
                 </div>
 
                 {/* Spec List */}
                 <div className="p-4 flex-grow flex flex-col divide-y divide-[var(--border-subtle)] font-mono text-xs">
                   {items.map((item, itemIdx) => (
-                    <div key={itemIdx} className="py-3 flex justify-between items-center group font-bold">
+                    <div
+                      key={itemIdx}
+                      className="py-3 flex justify-between items-center group font-bold"
+                    >
                       <div className="flex items-center gap-3">
                         <span className="group-hover:text-[var(--accent-color)] transition-colors duration-200">
                           {item.icon}
                         </span>
-                        <span className="uppercase tracking-wider">{item.name}</span>
+                        <span className="uppercase tracking-wider">
+                          {item.name}
+                        </span>
                       </div>
                       <div className="flex gap-1">
                         {/* Rating dots representing mastery/confidence level */}
@@ -124,7 +138,14 @@ const Skills: React.FC = () => {
                           <span
                             key={dotIdx}
                             className={`w-2.5 h-2.5 border border-[var(--border-color)] rounded-full ${
-                              dotIdx < (item.name === "Python" || item.name === "Git" ? 5 : item.name === "SQL" || item.name === "FastAPI" || item.name === "Django" ? 4 : 3)
+                              dotIdx <
+                              (item.name === "Python" || item.name === "Git"
+                                ? 5
+                                : item.name === "SQL" ||
+                                    item.name === "FastAPI" ||
+                                    item.name === "Django"
+                                  ? 4
+                                  : 3)
                                 ? "bg-[var(--text-color)]"
                                 : "bg-transparent"
                             }`}

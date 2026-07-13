@@ -5,7 +5,10 @@ import { GraduationCap } from "lucide-react";
 
 const Education: React.FC = () => {
   return (
-    <section id="education" className="py-20 px-6 sm:px-12 bg-[var(--bg-color)] text-[var(--text-color)] news-border-b border-[var(--border-color)]">
+    <section
+      id="education"
+      className="py-20 px-6 sm:px-12 bg-[var(--bg-color)] text-[var(--text-color)] news-border-b border-[var(--border-color)]"
+    >
       <div className="container mx-auto max-w-5xl">
         {/* Section Header */}
         <div className="flex items-center gap-3 mb-12 news-border-b border-[var(--border-color)] pb-4 justify-between">
@@ -40,14 +43,23 @@ const Education: React.FC = () => {
                   <span className="text-[10px] font-mono bg-[var(--accent-color)] text-white px-2 py-0.5 uppercase font-bold tracking-wider">
                     BACHELORS DEGREE
                   </span>
-                  <h3 className="text-xl font-sans font-black uppercase mt-1">Your University</h3>
+                  <h3 className="text-xl font-sans font-black uppercase mt-1">
+                    Your University
+                  </h3>
                 </div>
               </div>
 
               <div className="font-serif text-sm text-[var(--muted-text)] font-light leading-relaxed">
-                <p><strong>Program:</strong> Bachelor of Technology (B.Tech)</p>
-                <p><strong>Specialization:</strong> Computer Science & Engineering</p>
-                <p><strong>Timeline:</strong> August 2022 – May 2026 (Expected)</p>
+                <p>
+                  <strong>Program:</strong> Bachelor of Technology (B.Tech)
+                </p>
+                <p>
+                  <strong>Specialization:</strong> Computer Science &
+                  Engineering
+                </p>
+                <p>
+                  <strong>Timeline:</strong> August 2022 – May 2026 (Expected)
+                </p>
                 <p className="mt-2 text-xs font-mono font-bold uppercase text-[var(--text-color)]">
                   Research Grade: CGPA 8.00 / 10.00
                 </p>
@@ -78,14 +90,23 @@ const Education: React.FC = () => {
                   <span className="text-[10px] font-mono bg-[var(--accent-color)] text-white px-2 py-0.5 uppercase font-bold tracking-wider">
                     SECONDARY EDUCATION
                   </span>
-                  <h3 className="text-xl font-sans font-black uppercase mt-1">High School Name</h3>
+                  <h3 className="text-xl font-sans font-black uppercase mt-1">
+                    High School Name
+                  </h3>
                 </div>
               </div>
 
               <div className="font-serif text-sm text-[var(--muted-text)] font-light leading-relaxed">
-                <p><strong>Program:</strong> Higher Secondary Certification (Class XII)</p>
-                <p><strong>Focus:</strong> Physics, Chemistry, Mathematics (PCM)</p>
-                <p><strong>Timeline:</strong> Graduated April 2022</p>
+                <p>
+                  <strong>Program:</strong> Higher Secondary Certification
+                  (Class XII)
+                </p>
+                <p>
+                  <strong>Focus:</strong> Physics, Chemistry, Mathematics (PCM)
+                </p>
+                <p>
+                  <strong>Timeline:</strong> Graduated April 2022
+                </p>
                 <p className="mt-2 text-xs font-mono font-bold uppercase text-[var(--text-color)]">
                   Performance Metrics: 90.00% Aggregate
                 </p>

@@ -57,7 +57,10 @@ const NestPage: React.FC = () => {
     handleThemeCheck();
 
     const observer = new MutationObserver(handleThemeCheck);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
 
     return () => observer.disconnect();
   }, []);
@@ -74,7 +77,8 @@ const NestPage: React.FC = () => {
             The Personal Space
           </h2>
           <p className="text-base text-[var(--muted-text)] max-w-xl mx-auto font-serif font-light leading-relaxed">
-            A repository of visual inspirations, audio flow loops, and philosophical anchors.
+            A repository of visual inspirations, audio flow loops, and
+            philosophical anchors.
           </p>
         </div>
 
@@ -87,7 +91,9 @@ const NestPage: React.FC = () => {
             >
               <div className="flex justify-between items-center text-[10px] font-mono font-bold opacity-60 uppercase mb-4">
                 <span>{item.ref}</span>
-                <span className="text-[var(--accent-color)]">NO_REF // 0{item.id}</span>
+                <span className="text-[var(--accent-color)]">
+                  NO_REF // 0{item.id}
+                </span>
               </div>
               <p className="text-lg font-serif italic text-[var(--text-color)] leading-relaxed flex-grow text-justify mb-6">
                 "{item.quote}"

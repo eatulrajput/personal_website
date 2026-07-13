@@ -34,7 +34,12 @@ const Navbar: React.FC = () => {
 
     const updateTime = () => {
       const now = new Date();
-      setTimeStr(now.toLocaleTimeString(undefined, { hour: "2-digit", minute: "2-digit" }));
+      setTimeStr(
+        now.toLocaleTimeString(undefined, {
+          hour: "2-digit",
+          minute: "2-digit",
+        }),
+      );
     };
     updateTime();
     const interval = setInterval(updateTime, 60000);
@@ -47,7 +52,10 @@ const Navbar: React.FC = () => {
     document.documentElement.setAttribute("data-theme", newTheme);
   };
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>, section: string) => {
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>,
+    section: string,
+  ) => {
     if (pathname === "/") {
       e.preventDefault();
       const el = document.getElementById(section);
@@ -62,7 +70,15 @@ const Navbar: React.FC = () => {
   useEffect(() => {
     if (pathname !== "/") return;
 
-    const sections = ["hero", "about", "skills", "education", "experience", "projects", "contact"];
+    const sections = [
+      "hero",
+      "about",
+      "skills",
+      "education",
+      "experience",
+      "projects",
+      "contact",
+    ];
     const observers = sections.map((id) => {
       const el = document.getElementById(id);
       if (!el) return null;
@@ -75,7 +91,7 @@ const Navbar: React.FC = () => {
         },
         {
           rootMargin: "-45% 0px -45% 0px",
-        }
+        },
       );
       observer.observe(el);
       return { observer, el, id };
@@ -96,7 +112,9 @@ const Navbar: React.FC = () => {
       <div className="w-full flex justify-between items-center px-6 py-2 text-xs font-mono news-border-b border-[var(--border-color)] uppercase tracking-wider bg-[var(--bg-color)]">
         <div>
           <span>Edition: </span>
-          <span className="font-bold text-[var(--accent-color)]">JULY 2026</span>
+          <span className="font-bold text-[var(--accent-color)]">
+            JULY 2026
+          </span>
         </div>
 
         {/* Theme Controls */}
@@ -104,7 +122,9 @@ const Navbar: React.FC = () => {
           <button
             onClick={() => handleThemeChange("light")}
             className={`px-2 py-0.5 transition cursor-pointer font-bold ${
-              theme === "light" ? "bg-[var(--text-color)] text-[var(--bg-color)]" : "hover:text-[var(--accent-color)]"
+              theme === "light"
+                ? "bg-[var(--text-color)] text-[var(--bg-color)]"
+                : "hover:text-[var(--accent-color)]"
             }`}
           >
             LIGHT
@@ -113,7 +133,9 @@ const Navbar: React.FC = () => {
           <button
             onClick={() => handleThemeChange("dark")}
             className={`px-2 py-0.5 transition cursor-pointer font-bold ${
-              theme === "dark" ? "bg-[var(--text-color)] text-[var(--bg-color)]" : "hover:text-[var(--accent-color)]"
+              theme === "dark"
+                ? "bg-[var(--text-color)] text-[var(--bg-color)]"
+                : "hover:text-[var(--accent-color)]"
             }`}
           >
             DARK
@@ -122,7 +144,9 @@ const Navbar: React.FC = () => {
           <button
             onClick={() => handleThemeChange("paper")}
             className={`px-2 py-0.5 transition cursor-pointer font-bold ${
-              theme === "paper" ? "bg-[var(--text-color)] text-[var(--bg-color)]" : "hover:text-[var(--accent-color)]"
+              theme === "paper"
+                ? "bg-[var(--text-color)] text-[var(--bg-color)]"
+                : "hover:text-[var(--accent-color)]"
             }`}
           >
             PAPER
@@ -134,7 +158,11 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto flex flex-col items-center py-6 px-6 text-center select-none">
         <Link href="/" className="hover:opacity-90 transition">
           <h1 className="text-4xl sm:text-6xl md:text-8xl font-black font-sans tracking-tighter uppercase leading-none">
-            DEV<span className="text-[var(--accent-color)] font-serif font-light">//</span>WIRED
+            DEV
+            <span className="text-[var(--accent-color)] font-serif font-light">
+              //
+            </span>
+            WIRED
           </h1>
         </Link>
         <p className="text-[10px] sm:text-xs font-mono uppercase tracking-[0.25em] mt-2 font-bold opacity-80">
@@ -155,7 +183,9 @@ const Navbar: React.FC = () => {
                     href={`/#${section}`}
                     onClick={(e) => handleNavClick(e, section)}
                     className={`pb-1 hover:text-[var(--accent-color)] border-b-2 transition-all ${
-                      isActive ? "border-[var(--accent-color)] text-[var(--accent-color)]" : "border-transparent"
+                      isActive
+                        ? "border-[var(--accent-color)] text-[var(--accent-color)]"
+                        : "border-transparent"
                     }`}
                   >
                     {label}
@@ -173,7 +203,11 @@ const Navbar: React.FC = () => {
                   strokeWidth={3}
                   viewBox="0 0 24 24"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </span>
               <div className="absolute right-0 mt-3 w-64 bg-[var(--card-bg)] border-2 border-[var(--border-color)] text-[var(--text-color)] shadow-[4px_4px_0px_var(--border-color)] p-3 space-y-2 opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-200 z-50">
@@ -181,7 +215,7 @@ const Navbar: React.FC = () => {
                 <div className="text-[9px] font-mono font-black tracking-widest text-[var(--accent-color)] uppercase border-b border-[var(--border-subtle)] pb-1.5 mb-2">
                   // Archive Indexes
                 </div>
-                
+
                 {[
                   {
                     label: "Blog Feed",
@@ -203,7 +237,9 @@ const Navbar: React.FC = () => {
                     key={path}
                     href={path}
                     className={`group/item block p-2 hover:bg-[var(--accent-color)] hover:text-white transition-colors duration-200 ${
-                      pathname === path ? "border-l-2 border-[var(--accent-color)] pl-1.5" : ""
+                      pathname === path
+                        ? "border-l-2 border-[var(--accent-color)] pl-1.5"
+                        : ""
                     }`}
                   >
                     <div className="flex justify-between items-center font-sans font-black text-xs uppercase tracking-wider">
@@ -232,7 +268,9 @@ const Navbar: React.FC = () => {
           {/* Right Status */}
           <div className="hidden lg:block text-xs font-mono font-bold">
             <span>STATUS: </span>
-            <span className="text-emerald-500 animate-pulse font-mono">[ ONLINE ]</span>
+            <span className="text-emerald-500 animate-pulse font-mono">
+              [ ONLINE ]
+            </span>
           </div>
         </div>
       </nav>
@@ -265,7 +303,11 @@ const Navbar: React.FC = () => {
               { label: "Git Docs", path: "/docs" },
             ].map(({ label, path }) => (
               <li key={path}>
-                <Link href={path} onClick={() => setIsOpen(false)} className="text-lg hover:text-[var(--accent-color)]">
+                <Link
+                  href={path}
+                  onClick={() => setIsOpen(false)}
+                  className="text-lg hover:text-[var(--accent-color)]"
+                >
                   {label}
                 </Link>
               </li>
@@ -282,13 +324,14 @@ const Navbar: React.FC = () => {
           </span>
           <div className="ticker-wrap flex-grow">
             <div className="ticker-content font-bold">
-              SYSTEM CONVERTED TO NEXT.JS APP ROUTER ... ALL ANIMATIONS HANDLED BY MOTION/REACT ... REMOVED 6 UNUSED LIBRARIES FOR 4X FASTER LOAD ... SEEKING SOFTWARE DEVELOPER OPPORTUNITIES ... LOCAL TIME {timeStr} ... DESIGN SYSTEM: EDITORIAL NEWSPRINT HYBRID ...
+              SYSTEM CONVERTED TO NEXT.JS APP ROUTER ... ALL ANIMATIONS HANDLED
+              BY MOTION/REACT ... REMOVED 6 UNUSED LIBRARIES FOR 4X FASTER LOAD
+              ... SEEKING SOFTWARE DEVELOPER OPPORTUNITIES ... LOCAL TIME{" "}
+              {timeStr} ... DESIGN SYSTEM: EDITORIAL NEWSPRINT HYBRID ...
             </div>
           </div>
         </div>
-        <div className="text-[10px] font-bold tracking-widest">
-          {timeStr}
-        </div>
+        <div className="text-[10px] font-bold tracking-widest">{timeStr}</div>
       </div>
     </header>
   );

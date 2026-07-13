@@ -6,7 +6,10 @@ import { motion } from "motion/react";
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-20 px-6 sm:px-12 bg-[var(--bg-color)] text-[var(--text-color)] news-border-b border-[var(--border-color)]">
+    <section
+      id="about"
+      className="py-20 px-6 sm:px-12 bg-[var(--bg-color)] text-[var(--text-color)] news-border-b border-[var(--border-color)]"
+    >
       <div className="container mx-auto max-w-5xl">
         {/* Section Header */}
         <div className="flex items-center gap-3 mb-10 news-border-b border-[var(--border-color)] pb-4 justify-between">
@@ -55,19 +58,28 @@ const About: React.FC = () => {
             <h3 className="text-3xl font-sans font-black uppercase tracking-tight leading-none mb-4">
               Building Scalable Backends with a Machine-Learned Core
             </h3>
-            
+
             <div className="text-base font-serif leading-relaxed text-[var(--text-color)] font-light space-y-4 text-justify">
               <p className="drop-cap">
-                Engineering modern backend architectures is no longer just about writing CRUD operations; it’s about modeling systems that process, scale, and learn. 
-                My name is Dev, and I specialize in orchestrating data flows and training models that integrate cleanly with production infrastructure. 
-                I focus on high-throughput backend services using Python, Django, FastAPI, and Postgresql, alongside applied ML pipelines.
+                Engineering modern backend architectures is no longer just about
+                writing CRUD operations; it’s about modeling systems that
+                process, scale, and learn. My name is Dev, and I specialize in
+                orchestrating data flows and training models that integrate
+                cleanly with production infrastructure. I focus on
+                high-throughput backend services using Python, Django, FastAPI,
+                and Postgresql, alongside applied ML pipelines.
               </p>
               <p>
-                Whether it is implementing face recognition attendance nodes or deploying conversational agents, my design ethos remains consistent: build modular, testable, and deeply performant systems. 
-                By adhering to solid software principles and reducing dependency bloat, I compile services that deliver reliability under stress.
+                Whether it is implementing face recognition attendance nodes or
+                deploying conversational agents, my design ethos remains
+                consistent: build modular, testable, and deeply performant
+                systems. By adhering to solid software principles and reducing
+                dependency bloat, I compile services that deliver reliability
+                under stress.
               </p>
               <p className="pt-2 border-t border-[var(--border-subtle)] font-mono text-xs font-bold uppercase tracking-wider text-[var(--accent-color)]">
-                Key Focus Areas: Systems Design // Distributed Inference Pipelines // Code Simplicity
+                Key Focus Areas: Systems Design // Distributed Inference
+                Pipelines // Code Simplicity
               </p>
             </div>
           </div>

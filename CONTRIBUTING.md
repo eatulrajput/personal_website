@@ -13,6 +13,7 @@ Whether you are resolving bug logs, introducing features, refining reference man
    - This creates a copy of the codebase under your own profile.
 
 2. **Clone Your Fork**
+
    ```bash
    git clone https://github.com/your-username/personal_website.git
    cd personal_website
@@ -20,11 +21,13 @@ Whether you are resolving bug logs, introducing features, refining reference man
 
 3. **Install Dependencies**
    We recommend using **Bun** to manage packages, matching our Next.js 16 workflow:
+
    ```bash
    bun install   # or npm install
    ```
 
 4. **Create a Local Topic Branch**
+
    ```bash
    git checkout -b feature/your-feature-name
    ```
@@ -50,9 +53,9 @@ Whether you are resolving bug logs, introducing features, refining reference man
 
 ### 📌 Review Guidelines
 
-* **Animation Checks**: Any visual elements using motion parameters must respect the `paper` theme and halt completely when `[data-theme="paper"]` is set.
-* **Typing Checks**: Always ensure proper typing checks and interface files are declared under `src/` to prevent CI pipeline compiler issues.
-* **Aesthetics**: Maintain the high-contrast newsprint column aesthetic (borders, lines, grids, dropped-capitals).
+- **Animation Checks**: Any visual elements using motion parameters must respect the `paper` theme and halt completely when `[data-theme="paper"]` is set.
+- **Typing Checks**: Always ensure proper typing checks and interface files are declared under `src/` to prevent CI pipeline compiler issues.
+- **Aesthetics**: Maintain the high-contrast newsprint column aesthetic (borders, lines, grids, dropped-capitals).
 
 ---
 

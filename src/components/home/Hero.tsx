@@ -8,7 +8,11 @@ const Hero: React.FC = () => {
   const [text, setText] = useState<string>("");
   const [isPaper, setIsPaper] = useState<boolean>(false);
 
-  const strings = ["a Backend Developer", "into Machine Learning", "a Systems Designer"];
+  const strings = [
+    "a Backend Developer",
+    "into Machine Learning",
+    "a Systems Designer",
+  ];
   const [loopNum, setLoopNum] = useState<number>(0);
   const [isDeleting, setIsDeleting] = useState<boolean>(false);
   const [speed, setSpeed] = useState<number>(60);
@@ -29,7 +33,10 @@ const Hero: React.FC = () => {
 
     // Listen to attribute modifications on html
     const observer = new MutationObserver(handleThemeCheck);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
 
     return () => observer.disconnect();
   }, []);
@@ -96,13 +103,19 @@ const Hero: React.FC = () => {
           {/* Subheading/Typewriter Deck */}
           <div className="text-xl sm:text-2xl font-serif italic text-[var(--accent-color)] min-h-[3rem] font-bold border-l-4 border-[var(--accent-color)] pl-4">
             Currently working as {text}
-            {!isPaper && <span className="animate-ping font-light text-[var(--accent-color)]">|</span>}
+            {!isPaper && (
+              <span className="animate-ping font-light text-[var(--accent-color)]">
+                |
+              </span>
+            )}
           </div>
 
           {/* Editorial Paragraph */}
           <p className="text-lg font-serif text-[var(--text-color)] leading-relaxed font-light max-w-3xl">
-            In an era where massive data and real-time inference govern technology, building resilient pipeline layers is paramount. 
-            Here is a deep look into my development journey, engineering methodologies, and open-source contributions.
+            In an era where massive data and real-time inference govern
+            technology, building resilient pipeline layers is paramount. Here is
+            a deep look into my development journey, engineering methodologies,
+            and open-source contributions.
           </p>
 
           {/* Print Style Call to Action Buttons */}

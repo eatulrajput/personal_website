@@ -28,7 +28,10 @@ const BlogPage: React.FC = () => {
     handleThemeCheck();
 
     const observer = new MutationObserver(handleThemeCheck);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
 
     return () => observer.disconnect();
   }, []);
@@ -46,7 +49,9 @@ const BlogPage: React.FC = () => {
             Blogs & Reports
           </h1>
           <p className="text-base sm:text-lg text-[var(--muted-text)] max-w-xl mx-auto md:mx-0 font-serif font-light leading-relaxed">
-            Welcome to my blog feed where I share tutorials, system writeups, and findings about backend scalability, database architecture, and applied machine learning models.
+            Welcome to my blog feed where I share tutorials, system writeups,
+            and findings about backend scalability, database architecture, and
+            applied machine learning models.
           </p>
         </div>
 
@@ -54,8 +59,12 @@ const BlogPage: React.FC = () => {
         <div className="w-full h-[300px] sm:h-[400px] md:h-[450px] relative">
           {isPaper ? (
             <div className="w-full h-full border-4 border-double border-[var(--border-color)] p-4 flex flex-col items-center justify-center bg-[var(--bg-color)]">
-              <span className="text-6xl text-[var(--accent-color)] font-black uppercase font-mono tracking-tighter">// 3D CANCELLED //</span>
-              <p className="text-xs font-mono font-bold mt-2 uppercase opacity-60">Print Edition: Interactive Elements Suppressed</p>
+              <span className="text-6xl text-[var(--accent-color)] font-black uppercase font-mono tracking-tighter">
+                // 3D CANCELLED //
+              </span>
+              <p className="text-xs font-mono font-bold mt-2 uppercase opacity-60">
+                Print Edition: Interactive Elements Suppressed
+              </p>
             </div>
           ) : (
             <div className="w-full h-full rounded-none overflow-hidden border border-[var(--border-color)] grayscale hover:grayscale-0 transition duration-700">
