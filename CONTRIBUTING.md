@@ -1,81 +1,61 @@
 ## 📬 Contributing Guidelines
 
-First of all, thanks for taking the time to contribute! ❤️
-Whether you're fixing bugs, adding features, improving documentation, or suggesting ideas — every bit helps.
+First of all, thank you for taking the time to contribute to the **DEV // WIRED** project! ❤️
+
+Whether you are resolving bug logs, introducing features, refining reference manuals, or correcting typography — every patch helps keep the chronicle accurate.
 
 ---
 
-### 🛠️ How to Contribute
+### 🛠️ Development Setup & Workflow
 
-1. **Fork the repository**
+1. **Fork the Repository**
+   - Click the **Fork** button at the top-right of this repository.
+   - This creates a copy of the codebase under your own profile.
 
-   * Click the "Fork" button at the top of the repo.
-   * This will create your own copy of the project.
-
-2. **Clone your fork**
-
+2. **Clone Your Fork**
    ```bash
-   git clone https://github.com/eatulrajput/personal_website.git
+   git clone https://github.com/your-username/personal_website.git
    cd personal_website
    ```
 
-3. **Create a new branch**
+3. **Install Dependencies**
+   We recommend using **Bun** to manage packages, matching our Next.js 16 workflow:
+   ```bash
+   bun install   # or npm install
+   ```
 
+4. **Create a Local Topic Branch**
    ```bash
    git checkout -b feature/your-feature-name
    ```
 
-4. **Make your changes**
-   Be sure to test everything before committing.
+5. **Implement Changes & Compile**
+   - Keep your components modular, reusable, and type-safe using **TypeScript**.
+   - Make sure your styles align with our custom theme attributes (`data-theme="light"`, `"dark"`, `"paper"`).
+   - Test compilation locally before committing:
+     ```bash
+     bun run build   # Verify there are no TS compiler or Next.js build exceptions
+     ```
 
-5. **Commit your changes**
+6. **Format Commit Messages**
+   Use standard conventional commits (e.g., `feat: add custom marquee toggle`, `fix: resolve Spline dynamic hydration error`).
 
-   ```bash
-   git add .
-   git commit -m "feat: your detailed message here"
-   ```
-
-6. **Push to your fork**
-
+7. **Push & Create Pull Request (PR)**
    ```bash
    git push origin feature/your-feature-name
    ```
-
-7. **Open a Pull Request (PR)**
-
-   * Go to the original repository on GitHub.
-   * Click "Compare & pull request".
-   * Add a clear title and description of what you’ve done.
+   Submit the pull request detailing the specific changes, visual adjustments, or test results.
 
 ---
 
-### 📌 Contribution Guidelines
+### 📌 Review Guidelines
 
-* Follow the existing coding style.
-* Use clear, concise commit messages.
-* Add comments where necessary.
-* Don’t forget to update documentation if needed.
-* Test your changes before submitting a PR.
-* Be respectful and constructive in all interactions.
-
----
-
-### 💡 Ideas for Contribution
-
-* 🚀 Add new features
-* 🐛 Fix bugs
-* 🧪 Improve tests or test coverage
-* 📝 Improve documentation (README, comments, etc.)
-* 🎨 Enhance UI/UX or responsiveness
-* 🌍 Improve accessibility or performance
+* **Animation Checks**: Any visual elements using motion parameters must respect the `paper` theme and halt completely when `[data-theme="paper"]` is set.
+* **Typing Checks**: Always ensure proper typing checks and interface files are declared under `src/` to prevent CI pipeline compiler issues.
+* **Aesthetics**: Maintain the high-contrast newsprint column aesthetic (borders, lines, grids, dropped-capitals).
 
 ---
 
 ### 🙏 Code of Conduct
 
-By participating in this project, you agree to abide by our [Code of Conduct](https://github.com/eatulrajput/personal_website/blob/main/CODE_OF_CONDUCT.md) — be respectful, inclusive, and kind.
-
----
-
-Thanks again! You make this project better. 🙌
-If you have any questions, feel free to open an issue or reach out.
+By contributing to this repository, you agree to treat everyone with respect, kindness, and professionalism as outlined in our [Code of Conduct](./CODE_OF_CONDUCT.md).

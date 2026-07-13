@@ -1,90 +1,99 @@
-# Personal Website Template
+# DEV // WIRED PORTFOLIO
 
-![Screenshot](./public/Sample.png)
+![Design Showcase](./screenshot.png)
 
-To see more screenshots look into screenshot folder.
+An editorial, print-digital newspaper hybrid developer portfolio inspired by the unique design layout of **Wired.com**. Built with **Next.js 16 (App Router)**, **React 19**, **Tailwind CSS v4**, and animated with **`motion/react`** (Framer Motion). 
 
-This project started as a hobby project in 2022 with the goal of creating a personal website. It was originally built using HTML, CSS, and some JavaScript. Over time, the need for a more scalable and maintainable structure led to rebuilding the site using modern technologies like React, Vite, and Tailwind CSS.
-
-This project has served as a learning experience in modern front-end development, with a focus on reusable components, responsive design, and clean UI/UX.
+This project features three distinct styling themes: **Light Newsprint**, **Compact Cyber Dark**, and a completely static, zero-latency **Minimalist Paper mode** styled to behave like physical print media.
 
 ---
 
-## 🛠️ Technologies Used
+## 🛠️ Tech Stack & Key Upgrades
 
-- **React** – JavaScript library for building user interfaces.
-- **Vite** – Fast and lightweight development build tool.
-- **Tailwind CSS** – Utility-first CSS framework.
-- **Illustrations** – From [Undraw](https://undraw.co/).
-- **Icons & Animations** – Lucid Icons, React Icons, Spline.
-- **Color Palette** – Primary color: `#3c77fc`
-- **Unsplash** - For website Images
+* **Next.js 16 (App Router)** – Modern structural routing replacing React Router DOM.
+* **React 19** – Optimized hooks and client-side rendering.
+* **Tailwind CSS v4** – Integrated with PostCSS compilation conditions.
+* **motion/react** – Unified animation suite replacing heavy event-listener libraries like `aos`.
+* **Zero Dependency Bloat** – Removed 6 unnecessary packages (`aos`, `react-scroll`, `react-masonry-css`, `react-spinners`, `react-typed`, `react-router-dom`) in favor of native CSS columns, standard Web API Intersection Observers, custom Typing hooks, and Tailwind loaders.
+
 ---
 
-## 🌐 Website Structure
+## 📂 Project Directory Structure
 
-The project includes the following pages and features:
+```text
+├── package.json               # Next.js 16 dependencies & scripts
+├── next.config.mjs            # Next.js bundler and transpile config
+├── postcss.config.mjs         # Tailwind CSS v4 PostCSS integration
+├── tsconfig.json              # TypeScript compilation rules with aliases
+├── public/                    # Grayscale editorial SVGs & assets
+└── src/
+    ├── app/                   # File-system router tree
+    │   ├── globals.css        # Tailwind v4 directives & theme configurations
+    │   ├── layout.tsx         # Metadata injections & Root layout
+    │   ├── page.tsx           # Home section compiler
+    │   ├── blog/              # Medium Feed rendering route
+    │   ├── nest/              # Space grid & Spotify pipeline route
+    │   ├── docs/              # Editorial reference listings
+    │   │   └── git/           # Git CLI command dictionary
+    │   └── not-found.tsx      # System 404 news bulletin
+    └── components/            # Reusable React components
+        ├── Navbar.tsx         # Wired header, Flash News ticker & Theme toggles
+        ├── Footer.tsx         # Double-ruled copyright columns
+        ├── LoadingSpinner.tsx # Dual-spinning custom CSS loader
+        ├── MediumFeed.tsx     # RSS-to-JSON parsing card grid
+        └── home/              # Individual page section components
+            ├── Hero.tsx       # Lead story & Typewriter hooks
+            ├── About.tsx      # Ideas column with dropped-capitals
+            ├── Skills.tsx     # Gear spec cards with rating metrics
+            ├── Education.tsx  # Science abstracts
+            ├── Experience.tsx # Business employment logs
+            ├── Projects.tsx   # Features cover-story columns
+            └── Contact.tsx    # Letters-to-the-editor ticket form
+```
 
-- **Home** – Contains multiple sections as separate components: Hero, About, Skills, Education, Experience, Projects, Contact.
-- **Blog** – Displays latest 10 blog posts from a Medium profile (replace with your own if desired).
-- **Nest** – An inspirational page that can include playlists, quotes, etc.
-- **Docs** – A page to write your own tutorials for sample, there is git and github tutorial.
 ---
 
-## 🚧 Features to Add (To-Do)
+## 🎨 Theme Modes
 
-- [X] Dark Mode
-- [X] Code Optimization
-- [X] Image Optimization
-- [X] Sticky Navigation
-- [X] Active Navigation Highlighting
+The portfolio includes a customized theme selector in the header banner:
+1. **LIGHT** – Styled as an off-white newsprint paper (`#faf9f6`) with dark ink text and red accents.
+2. **DARK** – A premium, high-contrast cyber dark workspace (`#080809`) with neon gray and red highlights.
+3. **PAPER** – An ultra-minimalist, high-contrast monochrome paper style. **All animations, typing loops, scroll reveals, tilt hooks, and marquees are completely disabled globally** via CSS overrides to emulate standard static ink.
 
 ---
 
 ## 📦 Getting Started
 
-Clone the repository and install dependencies:
+Ensure you have [Bun](https://bun.sh/) or Node.js installed.
 
-```bash
-git clone https://github.com/eatulrajput/personal_website.git
-cd personal_website
-npm install
-npm run dev
-````
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/eatulrajput/personal_website.git
+   cd personal_website
+   ```
 
-Then open [http://localhost:5173](http://localhost:5173) in your browser.
+2. **Install dependencies**:
+   ```bash
+   bun install   # or npm install
+   ```
+
+3. **Start the local server**:
+   ```bash
+   bun dev       # or npm run dev
+   ```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
 ## 🔄 Customization
 
-You can customize this template by editing:
-
-* Content in the components (inside `src/components`)
-* Styling with Tailwind utility classes
-* Blog fetch logic (API call to your own Medium or other platform)
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](./LICENSE).
-You are free to use, modify, and distribute it as you wish.
+* **Editorial content**: Edit section properties inside the components under `src/components/home/`.
+* **Theme colors**: Adjust HEX tokens in `src/app/globals.css`.
+* **Blog entries**: Change the Medium username endpoint in `src/components/MediumFeed.tsx`.
 
 ---
 
 ## 🙌 Contributions
 
-This repository is no longer maintained by the original creator, but feel free to:
-
-* Fork and customize it
-* Use it as inspiration for your own site
-* Share it with others
-
----
-
-## 🧾 Credits
-
-This project was inspired by various portfolio sites and learning resources across the web.
-Design, structure, and content were put together with simplicity and reusability in mind.
-
+Please refer to the [Contributing Guidelines](./CONTRIBUTING.md) and [Code of Conduct](./CODE_OF_CONDUCT.md) before pushing commits or creating pull requests.
